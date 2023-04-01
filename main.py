@@ -1,7 +1,8 @@
 def decorator(func):
     def inner(*args, **kwargs):
         print(f"Input: {args}")
-        print(func(*args, **kwargs))
+        result = func(*args, **kwargs)
+        return result
     return inner
 
 
@@ -10,4 +11,4 @@ def add(x, y):
     return x + y
 
 
-add(2, 3)
+print(add(2, 3))
